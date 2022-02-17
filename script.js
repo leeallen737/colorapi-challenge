@@ -16,9 +16,11 @@ fetch(URL)
 .then(data => {
     console.log(data.data.color)
     body.style.backgroundColor = data.data.color;
+    body.style.transition = '3s';
     main.innerHTML = `<p>${data.data.color}</p>`;
     
 }).catch( (error) => {
     body.style.backgroundColor = 'gray';
+    body.style.transition = '3s';
     main.innerHTML = `<p class='error' >API has no data!</p>`;
 } )
